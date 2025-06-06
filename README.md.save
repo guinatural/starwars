@@ -1,0 +1,33 @@
+    |
+| **PostgreSQL**    | Banco de dados para persistência local                 |
+| **Redis**         | Cache + workers                                        |
+| **Linear API**    | Gestão de tarefas e progresso                          |
+| **LangChain**     | Fluxos de raciocínio IA                                |
+| **LlamaIndex**    | Indexação de contextos locais                          |
+| **Ollama**        | IA local com modelos como Mistral, Llama3              |
+| **GitHub + Docker** | Versionamento e deploy portável                     |
+
+---
+
+## 🎯 Objetivos Principais
+
+- ✅ **Chatbot SKDVN**: assistente técnico que responde com IA via n8n
+- ✅ **Tutor de Italiano (Laaro)**: corrige frases e ensina com IA
+- 🔜 **Interface Telegram**: controle remoto por chat
+- 🔜 **Chains IA + Cloud Deploy (AWS)**: escalabilidade total
+
+---
+
+## 📂 Documentação Oficial
+
+| Documento                  | Descrição                                      |
+|---------------------------|-----------------------------------------------|
+| [`setup.md`](./docs/setup.md)               | Configuração local com Docker e backups |
+| [`linear.md`](./docs/linear.md)             | Integração total com Linear API         |
+| [`chatbot_skdvn.md`](./docs/chatbot_skdvn.md)| Chatbot técnico com IA via n8n          |
+| [`tutor_italiano.md`](./docs/tutor_italiano.md)| Tutor com IA que responde e corrige     |
+| [`cronograma.md`](./docs/cronograma.md)     | Cronograma e fases detalhadas           |
+``bash
+cd docker
+docker-compose up -d
+xdg-open http://localhost:5678

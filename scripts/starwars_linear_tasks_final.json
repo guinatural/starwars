@@ -1,0 +1,32 @@
+[
+  {
+    "title": "Instalar Docker e Compose",
+    "description": "Usar o comando: `sudo dnf install -y docker docker-compose` para preparar containers no Nobara Linux.",
+    "teamId": "def81677-38da-4f9c-961b-022f2f4c4b57"
+  },
+  {
+    "title": "Criar docker-compose.yml",
+    "description": "Configurar n8n, PostgreSQL e Redis em um arquivo. Base no Obsidian.",
+    "teamId": "def81677-38da-4f9c-961b-022f2f4c4b57"
+  },
+  {
+    "title": "Rodar n8n local",
+    "description": "Acessar http://localhost:5678 após containers subirem.",
+    "teamId": "def81677-38da-4f9c-961b-022f2f4c4b57"
+  },
+  {
+    "title": "Testar conexões com PostgreSQL e Redis",
+    "description": "Validar logs e mensagens de erro nos serviços do docker-compose.",
+    "teamId": "def81677-38da-4f9c-961b-022f2f4c4b57"
+  },
+  {
+    "title": "Subir primeiro bot SKDVN",
+    "description": "Criar workflow n8n com webhook e integração para respostas automáticas.",
+    "teamId": "def81677-38da-4f9c-961b-022f2f4c4b57"
+  },
+  {
+    "title": "Criar Tutor de Italiano (Laaro)",
+    "description": "Workflow n8n para ensinar italiano, via input + OpenAI.",
+    "teamId": "def81677-38da-4f9c-961b-022f2f4c4b57"
+  }
+]
