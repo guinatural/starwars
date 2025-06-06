@@ -1,0 +1,14 @@
+[
+  {
+    "title": "Instalar Docker e Compose",
+    "description": "Usar o comando: `sudo dnf install -y docker docker-compose` para preparar a base de containers no Nobara Linux.",
+    "teamId": "def81677-38da-4f9c-961b-022f2f4c4b57",
+    "projectId": "4e62b5cd-c534-4805-a106-b9006526d7f8"
+  },
+  {
+    "title": "Criar docker-compose.yml",
+    "description": "Configurar os serviços n8n, PostgreSQL e Redis em um arquivo único. Referência disponível no Obsidian e GitHub.",
+    "teamId": "def81677-38da-4f9c-961b-022f2f4c4b57",
+    "projectId": "4e62b5cd-c534-4805-a106-b9006526d7f8"
+  }
+]

@@ -1,0 +1,17 @@
+{
+  "query": "mutation {
+    issueCreate(input: {
+      teamId: \"def81677-38da-4f9c-961b-022f2f4c4b57\",
+      title: \"Criar chatbot SKDVN\",
+      description: \"Configurar LangChain + n8n + API local para o chatbot da SKDVN.\",
+      priority: 1,
+      projectId: \"4e62b5cd-c534-4805-a106-b9006526d7f8\"
+    }) {
+      success
+      issue {
+        id
+        title
+      }
+    }
+  }"
+}

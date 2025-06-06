@@ -1,29 +1,4 @@
-
-<<<<<<< HEAD
-# starwars
-projeto AI
-=======
-# 🚀 Projeto STARWARS
-
-> Stack profissional de automações inteligentes com IA local, DevOps, segurança e clean code.
-
-![Docker](https://img.shields.io/badge/Docker-n8n-blue)
-![IA Local](https://img.shields.io/badge/Ollama-Mistral%20%7C%20Llama3-green)
-![License](https://img.shields.io/badge/license-MIT-blue)
-
----
-
-## 🧠 Visão Geral
-
-**STARWARS** é um projeto modular focado em automações técnicas, IA prática e gestão de tarefas, voltado para produtividade, estudo e escalabilidade real.
-
----
-
-## 🏗️ Componentes da Stack
-
-| Componente        | Função Técnica                                         |
-| ----------------- | ------------------------------------------------------ |
-| **n8n**           | Orquestração de APIs, dados e automações               |
+    |
 | **PostgreSQL**    | Banco de dados para persistência local                 |
 | **Redis**         | Cache + workers                                        |
 | **Linear API**    | Gestão de tarefas e progresso                          |
@@ -43,7 +18,7 @@ projeto AI
 
 ---
 
-## 📂 Documentação
+## 📂 Documentação Oficial
 
 | Documento                  | Descrição                                      |
 |---------------------------|-----------------------------------------------|
@@ -52,13 +27,7 @@ projeto AI
 | [`chatbot_skdvn.md`](./docs/chatbot_skdvn.md)| Chatbot técnico com IA via n8n          |
 | [`tutor_italiano.md`](./docs/tutor_italiano.md)| Tutor com IA que responde e corrige     |
 | [`cronograma.md`](./docs/cronograma.md)     | Cronograma e fases detalhadas           |
-
----
-
-## 🚀 Deploy Rápido
-
-```bash
+``bash
 cd docker
 docker-compose up -d
 xdg-open http://localhost:5678
->>>>>>> 09e14e5 (📦 Projeto STARWARS — Documentação e Setup)
