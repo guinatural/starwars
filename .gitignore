@@ -1,4 +1,3 @@
-HEAD
 # Build and Release Folders
 bin-debug/
 bin-release/
@@ -19,3 +18,50 @@ bin-release/
 # information for Eclipse / Flash Builder.
 node_modules/\n.env\n.backups/\n*.log\n__pycache__/
  09e14e5 (📦 Projeto STARWARS — Documentação e Setup)
+=======
+# Logs e temporários
+*.log
+*.save
+*.tmp
+*.swp
+*.bak
+*.DS_Store
+
+# Node.js
+node_modules/
+scripts/node_modules/
+
+# Python (caso use futuramente)
+__pycache__/
+*.pyc
+
+# Arquivos sensíveis
+.env
+.env.*
+*.key
+*.pem
+
+# Backups e dumps
+*.tar.gz
+*.zip
+*.bak
+backups/
+*.sql
+
+# IDEs
+.vscode/
+.idea/
+
+# Obsidian
+.obsidian/
+
+# n8n arquivos runtime
+.n8n/
+n8n/.n8n/
+n8n/database.sqlite
+
+# MacOS
+.DS_Store
+
+# Arquivos de sistema
+Thumbs.db
