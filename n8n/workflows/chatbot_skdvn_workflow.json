@@ -1,0 +1,64 @@
+{
+  "name": "Chatbot SKDVN",
+  "nodes": [
+    {
+      "parameters": {
+        "path": "chatbot-skdvn",
+        "options": {}
+      },
+      "id": "Webhook",
+      "name": "Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [250, 300]
+    },
+    {
+      "parameters": {
+        "url": "http://localhost:11434/api/generate",
+        "method": "POST",
+        "jsonParameters": true,
+        "bodyParametersJson": "{\n  \"model\": \"mistral\",\n  \"prompt\": \"{{$json[\"text\"]}}\"\n}"
+      },
+      "id": "IA_Local_Ollama",
+      "name": "IA Local (Ollama)",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 1,
+      "position": [500, 300]
+    },
+    {
+      "parameters": {
+        "responseMode": "lastNode"
+      },
+      "id": "Retorno",
+      "name": "Retorno",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1,
+      "position": [750, 300]
+    }
+  ],
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "IA Local (Ollama)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IA Local (Ollama)": {
+      "main": [
+        [
+          {
+            "node": "Retorno",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false
+}
