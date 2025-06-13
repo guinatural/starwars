@@ -3,10 +3,9 @@
   "nodes": [
     {
       "parameters": {
-        "path": "chatbot-skdvn",
-        "options": {}
+        "path": "chatbot-skdvn"
       },
-      "id": "Webhook",
+      "id": "webhook-in",
       "name": "Webhook",
       "type": "n8n-nodes-base.webhook",
       "typeVersion": 1,
@@ -17,9 +16,10 @@
         "url": "http://localhost:11434/api/generate",
         "method": "POST",
         "jsonParameters": true,
-        "bodyParametersJson": "{\n  \"model\": \"mistral\",\n  \"prompt\": \"{{$json[\"text\"]}}\"\n}"
+        "options": {},
+        "bodyParametersJson": "{\n  \"model\": \"llama3:instruct\",\n  \"prompt\": \"{{$json[\"text\"]}}\"\n}"
       },
-      "id": "IA_Local_Ollama",
+      "id": "http-request",
       "name": "IA Local (Ollama)",
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 1,
@@ -27,9 +27,10 @@
     },
     {
       "parameters": {
+        "options": {},
         "responseMode": "lastNode"
       },
-      "id": "Retorno",
+      "id": "webhook-response",
       "name": "Retorno",
       "type": "n8n-nodes-base.respondToWebhook",
       "typeVersion": 1,
@@ -37,22 +38,22 @@
     }
   ],
   "connections": {
-    "Webhook": {
+    "webhook-in": {
       "main": [
         [
           {
-            "node": "IA Local (Ollama)",
+            "node": "http-request",
             "type": "main",
             "index": 0
           }
         ]
       ]
     },
-    "IA Local (Ollama)": {
+    "http-request": {
       "main": [
         [
           {
-            "node": "Retorno",
+            "node": "webhook-response",
             "type": "main",
             "index": 0
           }
@@ -60,5 +61,5 @@
       ]
     }
   },
-  "active": false
+  "active": true
 }
