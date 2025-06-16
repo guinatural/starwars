@@ -24,3 +24,4 @@ Detalhes do Projeto:
 7. **Comunidade**: Crie uma comunidade online para compartilhar o projeto, colaborar com outros desenvolvedores e receber feedback.
 
 O projeto SWIIS será iniciado na plataforma GitHub, com código aberto disponível para todos os desenvolvedores interessados em contribuir ou melhorar a solução. O objetivo é fornecer uma ferramenta útil e poderosas para aqueles que desejam explorar mais sobre Star Wars e criar conteúdo interativo e personalizado usando dados e IA.
+✅ 16/06 - Manhã concluída: IA local testada, fluxo SKDVN OK, backup verificado
