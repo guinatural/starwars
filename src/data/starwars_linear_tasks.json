@@ -1,0 +1,14 @@
+[
+  {
+    "title": "Revisar estrutura do projeto STARWARS",
+    "description": "Analisar diretórios, validar fluxos no n8n e IA local com Ollama.",
+    "teamId": "SEU_TEAM_ID",
+    "projectId": "SEU_PROJECT_ID"
+  },
+  {
+    "title": "Importar tarefas para Linear via script",
+    "description": "Usar Node.js e API GraphQL para alimentar backlog.",
+    "teamId": "SEU_TEAM_ID",
+    "projectId": "SEU_PROJECT_ID"
+  }
+]
