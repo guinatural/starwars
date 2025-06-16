@@ -3,7 +3,13 @@
 # 🚀 SCRIPT DE IMPORTAÇÃO DE TAREFAS NO LINEAR - STARWARS
 
 echo "🔐 Definindo variável de ambiente LINEAR_API_KEY..."
-export LINEAR_API_KEY="SEU_TOKEN_AQUI"  # Substitua com seu token real!
+if [ -z "$LINEAR_API_KEY" ]; then
+  export LINEAR_API_KEY="GUI"
+  echo "🔐 Token definido no script."
+else
+  echo "🔐 Token já estava definido no ambiente."
+fi
+
 
 echo "📂 Acessando diretório do script..."
 cd ~/projetos/starwars/src || { echo "❌ Pasta src não encontrada"; exit 1; }
