@@ -1,0 +1,2 @@
+- Chatbot funcional com retorno IA
+- Testes OK com prompts simples
