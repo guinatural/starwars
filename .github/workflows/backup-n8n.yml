@@ -1,0 +1,26 @@
+name: Backup N8N Workflows
+
+on:
+  push:
+    paths:
+      - "n8n/**"
+  schedule:
+    - cron: '0 23 * * *' # Todos os dias às 23h
+
+jobs:
+  backup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout do projeto
+        uses: actions/checkout@v3
+
+      - name: Zipar os arquivos de workflow
+        run: zip -r backup-$(date +%F).zip n8n/
+
+      - name: Commit do backup
+        run: |
+          git config user.name "SKDVN Bot"
+          git config user.email "bot@skdvn.ai"
+          git add backup-*.zip
+          git commit -m "🛡️ Backup automático N8N em $(date +%F)" || echo "Sem mudanças"
+          git push origin main
