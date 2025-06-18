@@ -29,3 +29,5 @@ O projeto SWIIS será iniciado na plataforma GitHub, com código aberto disponí
 ✅ 16/06/2025 - Tarefas importadas com sucesso via script
 ✅ 16/06/2025 - Tarefas importadas com sucesso via script
 ✅ 16/06/2025 - Tarefas importadas com sucesso via script
+✅ 16/06/2025 16:12 - Stack corrigida, containers OK, webhook testado
+✅ 16/06/2025 17:46 - Script corrigido, n8n rodando, Ollama validado localmente
