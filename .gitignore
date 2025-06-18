@@ -65,3 +65,13 @@ n8n/database.sqlite
 
 # Arquivos de sistema
 Thumbs.db
+.env
+*.env
+node_modules/
+data/*.json
+*.sh
+*.env
+node_modules/
+src/data/*.json
+*.log
+.DS_Store
