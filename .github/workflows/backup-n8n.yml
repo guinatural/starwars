@@ -1,26 +1,27 @@
-name: Backup N8N Workflows
+name: 🔁 Backup automático do N8N
 
 on:
-  push:
-    paths:
-      - "n8n/**"
   schedule:
-    - cron: '0 23 * * *' # Todos os dias às 23h
+    - cron: '0 3 * * *'
+  workflow_dispatch:
 
 jobs:
   backup:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout do projeto
+      - name: 📥 Clonar repositório
         uses: actions/checkout@v3
 
-      - name: Zipar os arquivos de workflow
-        run: zip -r backup-$(date +%F).zip n8n/
+      - name: 📂 Gerar backup zipado
+        run: |
+          mkdir -p .backup
+          zip -r .backup/backup-$(date +'%Y-%m-%d').zip docker/n8n/export.json
 
-      - name: Commit do backup
+      - name: ✅ Commit do backup
         run: |
           git config user.name "SKDVN Bot"
-          git config user.email "bot@skdvn.ai"
-          git add backup-*.zip
-          git commit -m "🛡️ Backup automático N8N em $(date +%F)" || echo "Sem mudanças"
+          git config user.email "bot@skdvn.local"
+          git add .backup/
+          git commit -m "🗂️ Backup automático N8N ($(date +'%Y-%m-%d'))" || echo "Nenhuma alteração para commitar"
           git push origin main
