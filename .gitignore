@@ -43,9 +43,9 @@ __pycache__/
 
 # Backups e dumps
 *.tar.gz
-*.zip
+#*.zip
 *.bak
-backups/
+#backups/
 *.sql
 
 # IDEs
@@ -75,3 +75,6 @@ node_modules/
 src/data/*.json
 *.log
 .DS_Store
+scripts/node_modules
+*.zip
+.backup/
