@@ -2,8 +2,8 @@ name: 🔁 Backup automático do N8N
 
 on:
   schedule:
-    - cron: '0 3 * * *'
-  workflow_dispatch:
+    - cron: '1 8 * * *' # Executa todos os dias às 18:00 UTC
+  workflow_dispatch:     # Permite executar manualmente
 
 jobs:
   backup:
@@ -17,11 +17,12 @@ jobs:
         run: |
           mkdir -p .backup
           zip -r .backup/backup-$(date +'%Y-%m-%d').zip docker/n8n/export.json
+          echo "🧷 Backup criado com sucesso!"
 
       - name: ✅ Commit do backup
         run: |
           git config user.name "SKDVN Bot"
           git config user.email "bot@skdvn.local"
-          git add .backup/
-          git commit -m "🗂️ Backup automático N8N ($(date +'%Y-%m-%d'))" || echo "Nenhuma alteração para commitar"
+          git add -f .backup/backup-*.zip  # <-- força adicionar mesmo se estiver no .gitignore
+          git commit -m "🗂 Backup automático N8N ($(date +'%Y-%m-%d %H:%M:%S'))" || echo "📁 Nenhuma alteração para commit"
           git push origin main
