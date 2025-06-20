@@ -76,5 +76,5 @@ src/data/*.json
 *.log
 .DS_Store
 scripts/node_modules
-*.zip
+!backup-*.zip
 .backup/
