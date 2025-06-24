@@ -1,22 +1,23 @@
-// Script para testar conexão e inserção no MongoDB
+// scripts/teste_mongo.js
 const { MongoClient } = require("mongodb");
 
-const uri = "mongodb://mongo:minhaSenhaSegura@localhost:27017/starwars_ai?authSource=admin";
-const client = new MongoClient(uri);
-
 async function main() {
+  const uri = "mongodb://mongo:minhaSenhaSegura@localhost:27017/starwars_ai?authSource=admin";
+  const client = new MongoClient(uri);
   try {
     await client.connect();
     const db = client.db("starwars_ai");
+    const collection = db.collection("respostas_ia");
 
-    const result = await db.collection("respostas_ia").insertOne({
-      pergunta: "quem é você?",
-      resposta: "Sou a IA Jedi que vive dentro do MongoDB."
-    });
+    const doc = {
+      pergunta: "qual seu papel?",
+      resposta: "Sou o Jedi-Bot do projeto STARWARS."
+    };
 
-    console.log("✅ Documento inserido com ID:", result.insertedId);
-  } catch (err) {
-    console.error("❌ Erro ao conectar ou inserir:", err.message);
+    const result = await collection.insertOne(doc);
+    console.log("Documento inserido com ID:", result.insertedId);
+  } catch (e) {
+    console.error("Erro ao conectar ou inserir:", e);
   } finally {
     await client.close();
   }
