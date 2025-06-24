@@ -54,6 +54,19 @@ services:
       - postgres
       - redis
 
+  mongodb:
+    image: mongo:7.0
+    container_name: starwars-mongo
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: mongo
+      MONGO_INITDB_ROOT_PASSWORD: minhaSenhaSegura
+    volumes:
+      - ./mongo-data:/data/db
+
 volumes:
   postgres_data:
   ollama_data:
+
