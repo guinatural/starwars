@@ -3,9 +3,9 @@
 # starwars
 projeto AI
 =======
-# 🚀 Projeto STARWARS
+# Projeto STARWARS
 
-> Stack profissional de automações inteligentes com IA local, DevOps, segurança e clean code.
+> Stack de automações inteligentes com IA local, DevOps, segurança e clean code.
 
 ![Docker](https://img.shields.io/badge/Docker-n8n-blue)
 ![IA Local](https://img.shields.io/badge/Ollama-Mistral%20%7C%20Llama3-green)
@@ -13,13 +13,13 @@ projeto AI
 
 ---
 
-## 🧠 Visão Geral
+## Visão Geral
 
 **STARWARS** é um projeto modular focado em automações técnicas, IA prática e gestão de tarefas, voltado para produtividade, estudo e escalabilidade real.
 
 ---
 
-## 🏗️ Componentes da Stack
+## Componentes da Stack
 
 | Componente        | Função Técnica                                         |
 | ----------------- | ------------------------------------------------------ |
@@ -34,7 +34,7 @@ projeto AI
 
 ---
 
-## 🎯 Objetivos Principais
+## Objetivos Principais
 
 - ✅ **Chatbot SKDVN**: assistente técnico que responde com IA via n8n
 - ✅ **Tutor de Italiano (Laaro)**: corrige frases e ensina com IA
@@ -43,7 +43,7 @@ projeto AI
 
 ---
 
-## 📂 Documentação
+## Documentação
 
 | Documento                  | Descrição                                      |
 |---------------------------|-----------------------------------------------|
@@ -55,21 +55,21 @@ projeto AI
 
 ---
 
-## 🚀 Deploy Rápido
+## Deploy Rápido
 
 ```bash
 cd docker
 docker-compose up -d
 xdg-open http://localhost:5678
->>>>>>> 09e14e5 (📦 Projeto STARWARS — Documentação e Setup)
+>>>>>>> 09e14e5 ( Projeto STARWARS — Documentação e Setup)
 
-# 🤖 SKDVN — Star Wars Knowledge Development Node
+#  SKDVN — Star Wars Knowledge Development Node
 
 > Primeira versão do sistema de automação com IA local usando n8n + Ollama
 
 ---
 
-## ✨ Visão Geral
+##  Visão Geral
 
 Este projeto integra o [n8n](https://n8n.io/) com modelos LLM locais via [Ollama](https://ollama.com/), permitindo interações de linguagem natural com IA **sem depender de nuvem**.
 
@@ -77,39 +77,39 @@ Você conversa com a IA dentro do n8n, e ela responde usando modelos como `llama
 
 ---
 
-## 🧱 Tecnologias Usadas
+## Tecnologias Usadas
 
-- ⚙️ Docker
-- 🔄 Docker Compose
-- 🤖 n8n (Editor de automações no-code)
-- 🧠 Ollama (Modelos LLM locais)
-- 🧰 GitHub Actions (Backup automático)
-- 🧼 Scripts personalizados (importação de tarefas, backup, etc.)
+-  Docker
+-  Docker Compose
+-  n8n (Editor de automações no-code)
+-  Ollama (Modelos LLM locais)
+-  GitHub Actions (Backup automático)
+-  Scripts personalizados (importação de tarefas, backup, etc.)
 
 ---
 
-## 🧪 Como Executar Localmente
+##  Como Executar Localmente
 
 ```bash
 git clone https://github.com/guinatural/starwars.git
 cd starwars
 docker-compose up -d
 
-# 🤖 SKDVN V1 – Chatbot com IA Local via n8n + Ollama
+#  SKDVN V1 – Chatbot com IA Local via n8n + Ollama
 
 Este projeto é um protótipo funcional de chatbot alimentado por LLMs locais via Ollama integrado ao n8n.
 
-## 📌 Visão Geral
+##  Visão Geral
 - Utiliza modelos como `llama3` via Ollama
 - Interface de chat interativa diretamente no n8n
 - Ideal para suporte, POCs com IA e automações privadas
 
-## 🚀 Tecnologias
+##  Tecnologias
 - n8n (via Docker)
 - Ollama (modelos locais)
 - GitHub Actions (CI para backup)
 
-## 🧠 Como Funciona
+##  Como Funciona
 1. Usuário envia mensagem via chat do n8n
 2. A entrada é repassada ao modelo Ollama
 3. A resposta é retornada ao usuário no chat
@@ -119,11 +119,11 @@ Este projeto é um protótipo funcional de chatbot alimentado por LLMs locais vi
 - Modelo `llama3` instalado: `ollama pull llama3`
 - Executar: `docker-compose up -d`
 
-## 📦 Backup Automático
+##  Backup Automático
 - Workflows salvos em `docker/n8n/export.json`
 - Backup diário em `.backup/*.zip`
 
-## 📁 Estrutura
+##  Estrutura
 .
 ├── docker/
 │ └── docker-compose.yml
@@ -134,6 +134,6 @@ Este projeto é um protótipo funcional de chatbot alimentado por LLMs locais vi
 └── README.md
 
 
-## 💬 Autor
+##  Autor
 [guinatural](https://github.com/guinatural)
 
