@@ -1,4 +1,4 @@
-# STARWARS IA — Stack de Automação Inteligente com IA Local
+# STARWARS— Stack de Automação Inteligente com IA Local
 
 > **SKDVN — Star Wars Knowledge Development Node**
 
