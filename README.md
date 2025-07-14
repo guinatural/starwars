@@ -1,41 +1,44 @@
-# STARWARS— Stack de Automação Inteligente com IA Local
+# STARWARS — Stack de Automação Inteligente com IA Local
 
 > **SKDVN — Star Wars Knowledge Development Node**
 
-Primeira versão do sistema de automação com IA local usando n8n + Ollama + MongoDB.
+Primeira versão do sistema de automação com IA local usando n8n + Ollama + MongoDB. Agora, com novas integrações planejadas e aprimoramentos visando escalabilidade, robustez e extensibilidade.
 
 ---
 
 ## Visão Geral
 
-O projeto **STARWARS** integra o [n8n](https://n8n.io/) com modelos LLM locais via [Ollama](https://ollama.com/) e persistência de histórico no MongoDB, permitindo interações de linguagem natural com IA **sem depender de nuvem**.
+O projeto **STARWARS** integra o [n8n](https://n8n.io/) com modelos LLM locais via [Ollama](https://ollama.com/) e persistência de histórico no MongoDB. Nosso objetivo é possibilitar interações em linguagem natural com IA **sem depender de nuvem**, mantendo tudo em ambiente local-first. A arquitetura atual suporta interações no n8n com modelos como `llama3` e `mistral` e registra todo o histórico das conversas para auditoria e análise técnica.
 
-Você conversa com a IA dentro do n8n, e ela responde usando modelos como `llama3` ou `mistral` via servidor local. Toda interação é registrada no MongoDB para análise, auditoria e construção de conhecimento técnico.
+Nosso roadmap inclui expansão para integração com Telegram, API Linear e futuras chains na AWS.
 
 ---
 
 ## Componentes da Stack
 
-| Componente   | Função Técnica                              |
-|--------------|---------------------------------------------|
-| n8n          | Orquestração de APIs, dados e automações    |
-| PostgreSQL   | Banco de dados para persistência do n8n     |
-| Redis        | Cache e workers para tarefas assíncronas    |
-| API Linear   | Gestão de tarefas e progresso (futuro)      |
-| LangChain    | Fluxos de raciocínio IA                     |
-| Ollama       | IA local com modelos LLM (Mistral, Llama3)  |
-| MongoDB      | Persistência das conversas e auditoria      |
-| GitHub/Docker| Portabilidade, CI/CD e versionamento        |
+| Componente   | Função Técnica                                                      |
+|--------------|---------------------------------------------------------------------|
+| n8n          | Orquestração de workflows, automações e integração de APIs          |
+| PostgreSQL   | Banco de dados para persistência do n8n                              |
+| Redis        | Cache e gerenciamento de tarefas assíncronas                         |
+| API Linear   | Gestão de tarefas e progresso (futuro)                               |
+| LangChain    | Fluxos de raciocínio IA e composição de agentes inteligentes         |
+| Ollama       | IA local com modelos LLM (Mistral, Llama3)                            |
+| MongoDB      | Persistência das conversas, logs e auditoria                          |
+| Qdrant       | Armazenamento vetorial para busca semântica e recuperação de contexto   |
+| GitHub/Docker| Portabilidade, CI/CD e versionamento                                 |
+| Telegram     | Comunicação bilateral para envio/recebimento de mensagens e notificações |
 
 ---
 
 ## Objetivos do Projeto
 
-- ✅ **Chatbot SKDVN**: Assistente técnico alimentado por IA local via n8n
-- ✅ **Persistência de conversas no MongoDB**: Toda interação registrada para análise e consulta
-- ✅ **Fluxo extensível**: Pronto para integração com outras ferramentas e APIs (ex: Linear, Telegram, etc.)
-- ✅ **Automação DevOps e produtividade**
-- 🔜 **Interface Telegram e chains IA cloud (AWS)**
+- ✅ **Chatbot SKDVN**: Assistente técnico impulsionado por IA local via n8n.
+- ✅ **Persistência das conversas no MongoDB**: Registro completo para auditoria, análise e construção de conhecimento.
+- ✅ **Fluxos extensíveis e híbridos**: Integração combinada de upload direto (via Webhook/Form Trigger) e sincronização com Google Drive.
+- ✅ **Integração com Telegram**: Recebimento de perguntas e envio de respostas em tempo real, além de notificações críticas (ex.: operações de deleção no Qdrant).
+- ✅ **Automação DevOps e produtividade**: Backups automáticos, CI/CD e versionamento.
+- 🔜 **Integração com API Linear e futuras chains IA cloud (AWS)**.
 
 ---
 
@@ -46,67 +49,3 @@ git clone https://github.com/guinatural/starwars.git
 cd starwars
 docker-compose up -d
 xdg-open http://localhost:5678
-```
-> O n8n estará disponível em [http://localhost:5678](http://localhost:5678)
-
----
-
-## Requisitos
-
-- Docker + docker-compose
-- Modelo `llama3` instalado: `ollama pull llama3`
-- MongoDB local (configurado no docker-compose)
-- Credenciais configuradas no n8n para MongoDB
-
----
-
-## Como Funciona
-
-1. Usuário envia mensagem via chat do n8n
-2. A entrada é repassada ao modelo Ollama (ex: `llama3`)
-3. A resposta é retornada ao usuário **e salva** no MongoDB
-4. Todo histórico pode ser consultado para auditoria e análise
-
----
-
-## Backup Automático
-
-- Workflows salvos em `docker/n8n/export.json`
-- Backup diário em `.backup/*.zip` (via GitHub Actions)
-
----
-
-## Estrutura de Pastas
-
-```
-.
-├── docker/
-│   ├── docker-compose.yml
-│   └── n8n/
-│       └── export.json
-├── .github/
-│   └── workflows/
-│       └── backup-n8n.yml
-├── .backup/
-├── README.md
-└── outros arquivos...
-```
-
----
-
-## Documentação e Tutoriais
-
-| Documento           | Descrição                                    |
-|---------------------|-----------------------------------------------|
-| `setup.md`          | Configuração local com Docker e backups       |
-| `linear.md`         | Integração total com API Linear (futuro)      |
-| `chatbot_skdvn.md`  | Chatbot técnico com IA via n8n                |
-| `cronograma.md`     | Cronograma e fases detalhadas                 |
-
----
-
-## Autor
-
-[guinatural](https://github.com/guinatural)
-
----
