@@ -2,7 +2,7 @@ name: 🔁 Backup automático do N8N
 
 on:
   schedule:
-    - cron: '1 8 * * *' # Executa todos os dias às 18:00 UTC
+    - cron: '1 0 * * *' # Executa todos os dias às 10:00 UTC
   workflow_dispatch:     # Permite executar manualmente
 
 jobs:
